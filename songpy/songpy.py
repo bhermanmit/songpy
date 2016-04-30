@@ -1,19 +1,22 @@
+"""SongPy class, performs operations with youtube
 """
-Project is used to download youtube video into an m4a file and set ID3 tags.
-"""
-import sys
-import urllib2
-import re
 
 
-def main():
-    """Main entry point for project."""
-    response = urllib2.urlopen('http://youtube.com/')
-    html = response.read()
-    
+class SongPy(object):
 
-    print html
-    pass
+    """Performs operations with youtube
+    """
 
-if __name__ == '__main__':
-    sys.exit(main())
+    def __init__(self, options):
+
+        self._options = options
+
+    def __str__(self):
+
+        string = ""
+        string += "SongPy class\n"
+        string += "------------\n"
+
+        string += str(self._options)
+        
+        return string
