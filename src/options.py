@@ -4,7 +4,7 @@
 import argparse
 
 
-class Options():
+class Options(object):
 
     """Contains options for SongPy
     """

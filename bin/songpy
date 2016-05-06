@@ -1,6 +1,0 @@
-#!/usr/bin/python
-
-import songpy
-
-if __name__ == '__main__':
-    songpy.main()
