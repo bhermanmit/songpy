@@ -14,15 +14,18 @@ class Options(object):
                         help='Artist of the song.')
     Parser.add_argument('-s', '--song', dest='song',
                         help='Title of song.')
+    Parser.add_argument('-d', '--dest', dest='dest', help='Destination directory for downloaded song.')
 
     def __init__(self):
 
         self._artist = None
         self._song = None
+        self._dest = None
 
         args = Options.Parser.parse_args()
         self.artist = args.artist
         self.song = args.song
+        self.dest = args.dest
 
     def __str__(self):
 
@@ -32,6 +35,7 @@ class Options(object):
 
         string += 'Artist: {}\n'.format(self.artist)
         string += 'Song: {}\n'.format(self.song)
+        string += 'Destination: {}\n'.format(self.dest)
 
         return string
 

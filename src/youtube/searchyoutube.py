@@ -34,9 +34,12 @@ class SearchYoutube(object):
         self.youtube_address = 'https://www.youtube.com'
         pre_query = '/results?search_query='
         resong = self.song.replace(' ', '+')
-        self.artist = self.artist.replace(' ', '+')
+        resong = resong.replace('&', '%26')
+        reartist = self.artist.replace(' ', '+')
+        reartist = self.artist.replace('&', '%26')
         self.artist = self.artist.decode('utf-8')
-        post_query = self.artist + '+' + resong
+        self.song = self.song.decode('utf-8')
+        post_query = reartist + '+' + resong + '+audio'
         self.query = self.youtube_address + pre_query + post_query
 
     def __search(self):
