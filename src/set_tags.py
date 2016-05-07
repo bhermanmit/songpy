@@ -3,7 +3,7 @@
 import eyed3
 
 
-class Settags(object):
+class SetTags(object):
 
     def __init__(self, youtube_results, album_art):
         self.artist = album_art.artist_tag
