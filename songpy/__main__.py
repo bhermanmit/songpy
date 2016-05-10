@@ -1,6 +1,6 @@
+"""Contains main execution routine when calling entry point.
 """
-Project is used to download youtube video into an m4a file and set ID3 tags.
-"""
+
 import sys
 
 from src import options, album_art, set_tags
