@@ -3,8 +3,8 @@
 from distutils.core import setup
 from setuptools import find_packages
 
-setup(name='Distutils',
-      version='1.0',
+setup(name='songpy',
+      version='0.1',
       description='Youtube Music Downloader',
       author='Chris Herman',
       author_email='crherman7@gmail.com',
@@ -14,7 +14,7 @@ setup(name='Distutils',
           , 'requests', 'youtube-dl', 'eyed3'],
       entry_points={
           'console_scripts': [
-              'songpy = src.__main__:main'
+              'songpy = songpy.__main__:main'
           ]
       }
       )
